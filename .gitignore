@@ -2,3 +2,5 @@
 node_modules/
 *.log
 local/
+lexer.js
+parser.js

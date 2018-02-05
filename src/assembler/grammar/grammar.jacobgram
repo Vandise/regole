@@ -1,0 +1,24 @@
+%moduleName Parser
+
+Root =
+    Expressions function(expressions) {
+      return expressions;
+    }
+  ;
+
+Expressions =
+    Expression function(expression) {
+      return expression;
+    }
+  ;
+
+Expression =
+    Terminator function(_) {
+      console.log('Terminator expression');
+      return null;
+    }
+  ;
+
+Terminator =
+    'T_TERMINATOR'
+  ;
