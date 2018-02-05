@@ -4,6 +4,7 @@
   "description": "A web-based asm simulator",
   "main": "src/index.js",
   "scripts": {
+    "start": "NODE_ENV=development node scripts/dev_server.js",
     "test": "babel-node spec/test_suite.js"
   },
   "repository": {
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/Vandise/regole#readme",
   "devDependencies": {
     "copy-webpack-plugin": "^4.3.1",
+    "gulp-util": "^3.0.8",
     "jasmine": "^2.9.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
