@@ -1,0 +1,27 @@
+{
+  "name": "regole",
+  "version": "1.0.0",
+  "description": "A web-based asm simulator",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vandise/regole.git"
+  },
+  "keywords": [
+    "asm",
+    "javascript",
+    "simulator"
+  ],
+  "author": "Benjamin J. Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vandise/regole/issues"
+  },
+  "homepage": "https://github.com/Vandise/regole#readme",
+  "devDependencies": {
+    "jasmine": "^2.9.0"
+  }
+}
