@@ -8,4 +8,5 @@ digits = [0-9]
   return 'T_TERMINATOR';
 }
 
+<>\s+ {  }
 <>$   { return 'T_EOF'; }

@@ -24,4 +24,11 @@ describe('Lexer', () => {
     );
   });
 
+  it('skips whitespace', () => {
+    lexer.setInput(" ");
+    expect(extractTokens(lexer)).toEqual(
+      []
+    );
+  });
+
 });
