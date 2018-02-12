@@ -31,4 +31,11 @@ describe('Lexer', () => {
     );
   });
 
+  it('can parse identifiers', () => {
+    lexer.setInput("a");
+    expect(extractTokens(lexer)).toEqual(
+      ['T_IDENTIFIER']
+    );
+  });
+
 });
