@@ -47,4 +47,14 @@ describe('Lexer', () => {
     );
   });
 
+  it('can parse the mov instruction', () => {
+    lexer.setInput(`
+      .main
+        mov a b
+    `);
+    expect(extractTokens(lexer)).toEqual(
+      ['T_MOV', 'T_IDENTIFIER', 'T_IDENTIFIER']
+    );
+  });
+
 });
