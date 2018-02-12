@@ -31,8 +31,17 @@ describe('Lexer', () => {
     );
   });
 
+  it('transitions to MAIN state', () => {
+    lexer.setInput(".main");
+    extractTokens(lexer);
+    expect(lexer.getState()).toEqual('MAIN');
+  });
+
   it('can parse identifiers', () => {
-    lexer.setInput("a");
+    lexer.setInput(`
+      .main
+        a
+    `);
     expect(extractTokens(lexer)).toEqual(
       ['T_IDENTIFIER']
     );

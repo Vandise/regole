@@ -4,14 +4,19 @@
 digits = [0-9]
 %%
 
-<>\n {
+<DEFAULT,MAIN>\n {
   return 'T_TERMINATOR';
 }
 
-<>\w+ {
+<DEFAULT,MAIN>\s+ {  }
+
+<DEFAULT,MAIN>\.main {
+  this.pushState('MAIN');
+}
+
+<MAIN>\w+ {
   this.jjval = this.jjtext;
   return 'T_IDENTIFIER';
 }
 
-<>\s+ {  }
-<>$   { return 'T_EOF'; }
+<DEFAULT,MAIN>$   { return 'T_EOF'; }
